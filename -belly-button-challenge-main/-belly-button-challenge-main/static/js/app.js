@@ -1,6 +1,6 @@
 // Build the metadata panel
 function buildMetadata(sample) {
-  d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
+  d3.json("samples.json").then((data) => {
 
     // get the metadata field
   let metadata = data.metadata;
@@ -31,7 +31,7 @@ function buildMetadata(sample) {
 
 // function to build both charts
 function buildCharts(sample) {
-d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
+d3.json("samples.json").then((data) => {
 
 // Get the samples field
   let samples = data.samples;
@@ -105,7 +105,7 @@ d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").th
 
 // Function to run on page load
 function init() {
-d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
+d3.json("samples.json").then((data) => {
 
 // Get the names field
   let names = data.names;
@@ -114,7 +114,7 @@ d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").th
   let selector = d3.select("#selDataset");
 
 // Use the list of sample names to populate the select options
-  d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
+  d3.json("samples.json").then((data) => {
   let sampleNames = data.names;
 // Hint: Inside a loop, you will need to use d3 to append a new
 // option for each sample name.
